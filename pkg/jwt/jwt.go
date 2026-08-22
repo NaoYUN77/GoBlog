@@ -9,7 +9,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 )
-
+//生成jwt token函数
 func GenJWT(username string) (token string, err error) {
 	var claims = models.Claims{
 		Username: username,
