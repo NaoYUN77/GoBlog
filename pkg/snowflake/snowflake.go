@@ -5,11 +5,13 @@ import (
 	"github.com/bwmarrin/snowflake"
 	"time"
 	"Blog/settings"
-
-
 )
 
+
+//雪花算法生成文章唯一id
 var node *snowflake.Node
+
+//初始化
 func Init() (err error) {
 	var st time.Time
 	//开始时间
