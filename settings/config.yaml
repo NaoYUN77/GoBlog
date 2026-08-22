@@ -1,0 +1,24 @@
+app: 
+  name: "blog"
+  version: "v1"
+  port: "8080"
+  logPath: "./blog.log"
+  logLevel: "info"
+  start_time: "2026-01-01 00:00:00"
+  machine_id: 1
+
+mysql:
+  host: "127.0.0.1"
+  #db name
+  dbname: "blog"
+  #db port
+  port: "3306"
+  user: "root"
+  password: "123"
+  charset: "utf8mb4"
+  #链接闲置保存时间
+
+redis:
+  host: "127.0.0.1"
+  port: "6379"
+  password: "123456"

@@ -1,0 +1,1 @@
+create database blog default CHARSET utf8mb4 COMMENT "博客数据库";

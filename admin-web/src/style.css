@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  /* -- 字体：Inter 负责界面文字，宋体风格衬线负责标题，等宽字体负责元数据/数字 -- */
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", "Songti SC", serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* -- 色彩：编辑台配色，暖纸色背景 + 火漆红主色 + 墨色文字 -- */
+  --color-paper: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-surface-alt: #efe9da;
+  --color-border: #e2dac7;
+  --color-border-strong: #cdc0a0;
+
+  --color-ink: #23283a;
+  --color-ink-soft: #6b6555;
+  --color-ink-faint: #9a927c;
+
+  --color-primary: #9c3b2b;
+  --color-primary-hover: #83301f;
+  --color-primary-soft: #f6e6e0;
+
+  --color-success: #1f6b45;
+  --color-success-soft: #e1efe4;
+
+  --color-warning: #96701c;
+  --color-warning-soft: #f7ecd3;
+
+  --color-danger: #b3372c;
+  --color-danger-soft: #f8e2de;
+
+  --shadow-card: 0 1px 2px rgba(35, 40, 58, 0.06), 0 1px 1px rgba(35, 40, 58, 0.04);
+  --shadow-pop: 0 12px 32px -8px rgba(35, 40, 58, 0.28);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "tnum" 1;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-strong);
+    border-radius: 999px;
+    border: 2px solid var(--color-paper);
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

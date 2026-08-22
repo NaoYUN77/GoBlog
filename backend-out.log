@@ -1,0 +1,20 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /admin/login              --> Blog/handler.LoginHandler (3 handlers)
+[GIN-debug] POST   /admin/post               --> Blog/handler.PostHandler (4 handlers)
+[GIN-debug] PATCH  /admin/patch/:id          --> Blog/handler.UpdatePostHandler (4 handlers)
+[GIN-debug] DELETE /admin/delete/:id         --> Blog/handler.DeletePostHandler (4 handlers)
+[GIN-debug] GET    /admin/get/:id            --> Blog/handler.GetPostSigleHandler (4 handlers)
+[GIN-debug] GET    /admin/list               --> Blog/handler.GetPostListHandler (4 handlers)
+[GIN-debug] GET    /post/:slug               --> Blog/handler.UserGetPostHandler (3 handlers)
+[GIN-debug] GET    /posts                    --> Blog/handler.UserGetPostListHandler (3 handlers)
+2026-08-21T23:26:06.088+0800	INFO	HTTP Request	{"method": "GET", "path": "/posts", "status": 200, "cost": "59.1941ms"}
+2026-08-21T23:30:10.483+0800	INFO	HTTP Request	{"method": "GET", "path": "/post/test-published-01", "status": 200, "cost": "23.5018ms"}
+2026-08-21T23:43:53.029+0800	INFO	HTTP Request	{"method": "GET", "path": "/posts", "status": 200, "cost": "8.0614ms"}
+2026-08-21T23:44:25.321+0800	INFO	HTTP Request	{"method": "GET", "path": "/posts", "status": 200, "cost": "3.1453ms"}
+2026-08-21T23:44:31.029+0800	INFO	HTTP Request	{"method": "GET", "path": "/post/test-published-01", "status": 200, "cost": "24.8072ms"}
+2026-08-21T23:44:32.276+0800	INFO	HTTP Request	{"method": "GET", "path": "/posts", "status": 200, "cost": "2.1124ms"}
+2026-08-22T01:05:31.150+0800	INFO	HTTP Request	{"method": "GET", "path": "/v1/models", "status": 404, "cost": "0s"}
+2026-08-22T01:05:31.460+0800	INFO	HTTP Request	{"method": "GET", "path": "/v1/models", "status": 404, "cost": "0s"}
